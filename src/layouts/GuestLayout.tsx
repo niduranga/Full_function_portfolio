@@ -4,7 +4,7 @@ import NavigationBar from "../components/navigationBar/NavigationBar.tsx";
 
 const GuestLayout :React.FC = () => {
     return (
-        <div>
+        <div className='bg-white min-h-screen'>
             <NavigationBar/>
             <Outlet/>
         </div>
