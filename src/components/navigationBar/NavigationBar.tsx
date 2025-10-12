@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router';
+import logo from "../../assets/logo.png"
 
 const NavigationBar: React.FC = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -57,7 +58,7 @@ const NavigationBar: React.FC = () => {
 
     return (
         <div className="flex justify-center items-center px-4 py-3 md:px-10 md:py-5">
-            <img src="../../../public/logo.png" alt="logo" className="w-36 md:w-48 mr-52" />
+            <img src={logo} alt="logo" className="w-36 md:w-48 mr-52" />
 
             <button
                 className="md:hidden text-gray-700 focus:outline-none"
