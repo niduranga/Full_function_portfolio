@@ -51,7 +51,7 @@ const Contact: React.FC = () => {
                             name="name"
                             required
                             placeholder="Your Name"
-                            className="w-full px-4 py-3 border border-red-700 text-white placeholder-gray-400 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-red-500 transition"
+                            className="w-full px-4 py-3 border border-red-700  placeholder-gray-400 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-red-500 transition"
                         />
 
                         <input
@@ -59,7 +59,7 @@ const Contact: React.FC = () => {
                             name="email"
                             required
                             placeholder="Your Email"
-                            className="w-full px-4 py-3 border border-red-700 text-white placeholder-gray-400 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-red-500 transition"
+                            className="w-full px-4 py-3 border border-red-700 placeholder-gray-400 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-red-500 transition"
                         />
 
                         <textarea
@@ -67,7 +67,7 @@ const Contact: React.FC = () => {
                             required
                             placeholder="Your Message"
                             rows={5}
-                            className="w-full px-4 py-3 border border-red-700 text-white placeholder-gray-400 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-red-500 transition resize-none"
+                            className="w-full px-4 py-3 border border-red-700 placeholder-gray-400 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-red-500 transition resize-none"
                         ></textarea>
                     </div>
 
