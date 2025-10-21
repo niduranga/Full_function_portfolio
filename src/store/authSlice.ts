@@ -1,8 +1,27 @@
 import { createSlice } from '@reduxjs/toolkit'
 import {AuthApi} from "../utilities/Api/AuthApi.ts";
 
-const initialState = {
+interface IAdmin {
+    loading: boolean,
+    username: string,
+    userEmail: string,
+    user_id: string,
+    token: string,
+    isAuthenticated: boolean
+}
+
+interface IAdminPayload {
+    status: number
+    user_name: string,
+    user_email: string,
+    user_id: string,
+    token: string
+}
+
+const initialState: IAdmin = {
     loading: false,
+    username: "",
+    userEmail: "",
     user_id: "",
     token: "",
     isAuthenticated: false
@@ -22,10 +41,8 @@ export const authSlice = createSlice({
             .addCase(
                 AuthApi.fulfilled,
                 (state, action) => {
-                    state.loading = false
-                    state.user_id = action.payload.user_id
-                    state.token = action.payload.token
-                    state.isAuthenticated = true
+                    const payload = action.payload
+                    setPayloadFroReduxStore(state, payload)
                 }
             )
             .addCase(
@@ -38,4 +55,15 @@ export const authSlice = createSlice({
     }
 })
 
+const setPayloadFroReduxStore = (state:IAdmin, payload:IAdminPayload) => {
+    console.log(payload)
+    if (payload) {
+        state.loading = false
+        state.isAuthenticated = true
+        state.username = payload.user_name
+        state.userEmail = payload.user_email
+        state.user_id = payload.user_id
+        state.token = payload.token;
+    }
+}
 export default authSlice.reducer

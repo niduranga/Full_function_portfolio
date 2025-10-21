@@ -10,10 +10,12 @@ import Contact from "../../components/pages/Contact.tsx";
 import Experience from "../../components/pages/Experience.tsx";
 import AdminLayout from "../../layouts/AdminLayout.tsx";
 import axios from "axios";
+import AdminDashboard from "../../components/pages/adminDashboard/AdminDashboard.tsx";
+
+axios.defaults.baseURL = import.meta.env.VITE_API_BASE_URL
+axios.defaults.withCredentials = true
 
 const AppRoutes :React.FC = () => {
-    axios.defaults.url = import.meta.env.VITE_API_BASE_URL
-    axios.defaults.withCredentials = true
     return (
         <BrowserRouter>
             <Routes>
@@ -25,10 +27,9 @@ const AppRoutes :React.FC = () => {
                     <Route path="/skills" element={<Skills/>}/>
                     <Route path="/contact" element={<Contact/>}/>
                 </Route>
-            </Routes>
-            <Routes>
+                <Route path="/admin/login" element={<AdminLogin/>}/>
                 <Route element={<AdminLayout/>}>
-                    <Route path="/portfolio/admin/login" element={<AdminLogin/>}/>
+                    <Route path="/admin/Dashboard" element={<AdminDashboard/>}/>
                 </Route>
             </Routes>
         </BrowserRouter>
