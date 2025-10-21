@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import {Link, NavLink} from 'react-router';
-import logo from "../../assets/logo.png"
 
 const NavigationBar: React.FC = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -14,42 +13,42 @@ const NavigationBar: React.FC = () => {
             <NavLink to="/" className={({ isActive }) =>
                 `block md:inline-block px-4 py-2 font-semibold hover:text-red-500 ${
                     isActive ? 'text-red-500 font-semibold' : 'text-gray-700'
-                }`}
+                }`} onClick={toggleMenu}
             >
                 Home
             </NavLink>
             <NavLink to="/about" className={({ isActive }) =>
                 `block md:inline-block px-4 py-2 font-semibold hover:text-red-500 ${
                     isActive ? 'text-red-500 font-semibold' : 'text-gray-700'
-                }`}
+                }`} onClick={toggleMenu}
             >
                 About
             </NavLink>
             <NavLink to="/education" className={({ isActive }) =>
                 `block md:inline-block px-4 py-2 font-semibold hover:text-red-500 ${
                     isActive ? 'text-red-500 font-semibold' : 'text-gray-700'
-                }`}
+                }`} onClick={toggleMenu}
             >
                 Education
             </NavLink>
             <NavLink to="/experience" className={({ isActive }) =>
                 `block md:inline-block px-4 py-2 font-semibold hover:text-red-500 ${
                     isActive ? 'text-red-500 font-semibold' : 'text-gray-700'
-                }`}
+                }`} onClick={toggleMenu}
             >
                 Experience
             </NavLink>
             <NavLink to="/skills" className={({ isActive }) =>
                 `block md:inline-block px-4 py-2 font-semibold hover:text-red-500 ${
                     isActive ? 'text-red-500 font-semibold' : 'text-gray-700'
-                }`}
+                }`} onClick={toggleMenu}
             >
                 Skills
             </NavLink>
             <NavLink to="/contact" className={({ isActive }) =>
                 `block md:inline-block px-4 py-2 font-semibold hover:text-red-500 ${
                     isActive ? 'text-red-500 font-semibold' : 'text-gray-700'
-                }`}
+                }`} onClick={toggleMenu}
             >
                 Contact
             </NavLink>
@@ -57,9 +56,9 @@ const NavigationBar: React.FC = () => {
     );
 
     return (
-        <div className="flex justify-center items-center px-4 py-3 md:px-10 md:py-5">
-            <Link to='/'>
-                <img src={logo} alt="logo" className="w-36 md:w-48 mr-52" />
+        <div className="flex justify-between items-center px-4 py-3 md:px-10 md:py-5 top-0 fixed w-full z-10 bg-white shadow-md">
+            <Link to='/' className="mr-10 text-2xl text-red-500 font-bold font-mono">
+                Niduranga Jayarathna
             </Link>
 
             <button
@@ -97,7 +96,7 @@ const NavigationBar: React.FC = () => {
             <nav className="hidden md:flex space-x-4 items-center">{navLinks}</nav>
 
             {menuOpen && (
-                <div className="absolute top-25 left-0 right-0 bg-white shadow-md md:hidden flex flex-col items-center z-50">
+                <div className="absolute top-14 left-0 right-0 bg-white shadow-md md:hidden flex flex-col items-center z-50">
                     {navLinks}
                 </div>
             )}

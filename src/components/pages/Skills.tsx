@@ -3,8 +3,8 @@ import {MySkills} from "../../utilities/data/dataFields.ts";
 
 const Skills : React.FC = () => {
     return (
-        <div className="flex flex-col">
-            <main className="flex-grow py-16 px-6">
+        <div className="flex flex-col bg-gray-100 min-h-screen">
+            <main className="flex-grow py-16 px-6 mt-7 md:mt-26">
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 max-w-6xl mx-auto">
                     {Object.entries(MySkills).map(([key, src]) => (
                         <div

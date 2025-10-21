@@ -34,14 +34,14 @@ const Contact: React.FC = () => {
     };
 
     return (
-        <div className="flex items-center justify-center p-4">
+        <div className="flex items-center justify-center p-4 min-h-screen bg-gray-100">
             <section className="py-16 px-4 w-full">
                 <form
                     onSubmit={onSubmit}
-                    className=" p-8 rounded-xl shadow-xl border border-red-700 max-w-lg w-full mx-auto space-y-6 transition-all duration-300 text-white"
+                    className=" p-8 rounded-xl shadow-xl border-3 border-red-700 max-w-lg w-full mx-auto space-y-6 transition-all duration-300 text-white"
                 >
                     <h2 className="text-3xl font-bold text-black text-center">Let's Connect</h2>
-                    <p className="text-gray-400 text-center text-sm mb-4">
+                    <p className="text-gray-600 text-center text-sm mb-4">
                         Have a project in mind or just want to say hi? Drop me a message.
                     </p>
 
@@ -51,7 +51,7 @@ const Contact: React.FC = () => {
                             name="name"
                             required
                             placeholder="Your Name"
-                            className="w-full px-4 py-3 border border-red-700 text-black placeholder-gray-400 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-red-500 transition"
+                            className="w-full px-4 py-3 border border-gray-700 text-black placeholder-gray-400 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-red-500 transition"
                         />
 
                         <input
@@ -59,7 +59,7 @@ const Contact: React.FC = () => {
                             name="email"
                             required
                             placeholder="Your Email"
-                            className="w-full px-4 py-3 border border-red-700 text-black placeholder-gray-400 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-red-500 transition"
+                            className="w-full px-4 py-3 border border-gray-700 text-black placeholder-gray-400 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-red-500 transition"
                         />
 
                         <textarea
@@ -67,7 +67,7 @@ const Contact: React.FC = () => {
                             required
                             placeholder="Your Message"
                             rows={5}
-                            className="w-full px-4 py-3 border border-red-700 text-black placeholder-gray-400 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-red-500 transition resize-none"
+                            className="w-full px-4 py-3 border border-gray-700 text-black placeholder-gray-400 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-red-500 transition resize-none"
                         ></textarea>
                     </div>
 

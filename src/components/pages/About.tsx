@@ -2,44 +2,20 @@ import React from 'react';
 
 const About: React.FC = () => {
     return (
-        <div className="flex items-center justify-center px-4 py-10 ">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl w-full">
-                {/* Card 1 */}
-                <div className="bg-white shadow-md rounded-lg p-6">
-                    <h2 className="text-xl font-bold mb-2">Introduction</h2>
-                    <p className="text-gray-600">I am a software engineering student at BCI,
-                        where I am pursuing my passion for software development
-                        and learning new technologies. I have a strong foundation
-                        in programming languages such as PHP, and web development
-                        technologies such as HTML, CSS, JavaScript, React.js, laravel.
-                        I have also completed certificate courses in Python for Data Science from
-                        IBM, and learned more about laravel and React and React Native on CoddingGura
-                        Institute.</p>
-                </div>
-
-                {/* Card 2 */}
-                <div className="bg-white shadow-md rounded-lg p-6">
-                    <h2 className="text-xl font-bold mb-2">Background</h2>
-                    <p className="text-gray-600 mb-2">Name: Niduranga Jayarathna</p>
-                    <p className="text-gray-600 mb-2">Birthday: March 12</p>
-                    <p className="text-gray-600 mb-2">Gender: Male (He/Him/His)</p>
-                    <p className="text-gray-600 mb-2">Location: Sri Lanka (GMT+5:30)</p>
-                    <p className="text-gray-600 mb-2">Communicate: English & Sinhala</p>
-                </div>
-
-                {/* Card 3 */}
-                <div className="bg-white shadow-md rounded-lg p-6">
-                    <h2 className="text-xl font-bold mb-2">Goals</h2>
-                    <p className="text-gray-600 mb-2">Follow: Software Engineering Degree</p>
-                    <p className="text-gray-600 mb-2">Practice: Software Development with standard level</p>
-                </div>
-
-                {/* Card 4 */}
-                <div className="bg-white shadow-md rounded-lg p-6">
-                    <h2 className="text-xl font-bold mb-2">Interests</h2>
-                    <p className="text-gray-600 mb-2">Watch: Movies & TV Shows</p>
-                    <p className="text-gray-600 mb-2">Programming: Using Design Principles</p>
-                </div>
+        <div className="flex justify-center items-center px-4 py-10 bg-gray-100 min-h-screen">
+            <div className="max-w-3xl bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg transition duration-300 ease-in-out">
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white mb-4">
+                    About Me
+                </h2>
+                <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+                    I am a <span className="font-semibold text-blue-600 dark:text-blue-400">Software Engineering</span> student at <span className="font-semibold text-purple-600 dark:text-purple-400">BCI</span>, where I pursue my passion for software development and learning new technologies.
+                </p>
+                <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mt-4">
+                    I have a strong foundation in programming languages like <span className="font-semibold">PHP</span>, and web development technologies including <span className="font-semibold">HTML</span>, <span className="font-semibold">CSS</span>, <span className="font-semibold">JavaScript</span>, <span className="font-semibold">React.js</span>, and <span className="font-semibold">Laravel</span>.
+                </p>
+                <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mt-4">
+                    I’ve completed certificate courses in <span className="font-semibold">Python for Data Science</span> from <span className="font-semibold">IBM</span>, and furthered my knowledge of Laravel, React, and React Native through the <span className="font-semibold">CoddingGura Institute</span>.
+                </p>
             </div>
         </div>
     );
